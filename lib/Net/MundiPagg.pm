@@ -1,5 +1,5 @@
 package Net::MundiPagg;
-$Net::MundiPagg::VERSION = '0.000001';
+$Net::MundiPagg::VERSION = '0.000002';
 use Moo;
 use XML::Compile::SOAP11;
 use XML::Compile::WSDL11;
@@ -24,16 +24,18 @@ has 'client' => (
     },
 );
 
-our $AUTOLOAD;
+sub BUILD {
+    my ($self) = @_;
 
-## no critic (Subroutines::RequireArgUnpacking)
-## no critic (ClassHierarchies::ProhibitAutoloading)
-sub AUTOLOAD {
-    my ( $method, $self, %args ) = ( $AUTOLOAD, @_ );
+    no strict 'refs';    ## no critic(TestingAndDebugging::ProhibitNoStrict)
+    foreach my $method ( map { $_->name } $self->client->operations ) {
+        *{$method} = sub {
+            my ( $this, %args ) = @_;
+            return $this->client->call( $method, %args );
+        };
+    }
 
-    $method =~ s/.*:://g;
-
-    return $self->client->call( $method, %args );
+    return;
 }
 
 1;
@@ -52,7 +54,13 @@ Net::MundiPagg - Net::MundiPagg - Documentation coming soon :)
 
 =head1 VERSION
 
-version 0.000001
+version 0.000002
+
+=head1 METHODS
+
+=head2 BUILD
+
+Private method
 
 =head1 AUTHOR
 

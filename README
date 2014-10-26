@@ -2,7 +2,11 @@ NAME
     Net::MundiPagg - Net::MundiPagg - Documentation coming soon :)
 
 VERSION
-    version 0.000001
+    version 0.000002
+
+METHODS
+  BUILD
+    Private method
 
 AUTHOR
     Blabos de Blebe <blabos@cpan.org>

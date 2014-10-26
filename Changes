@@ -1,4 +1,7 @@
 Histórico de revisões do módulo Net::MundiPagg
 
+0.0.2               2014-10-26
+                        - Removendo AUTOLOAD
+
 0.0.1               2014-10-24
                         - Versão inicial
