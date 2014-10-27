@@ -20,15 +20,14 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Net::MundiPagg",
   "PREREQ_PM" => {
-    "Data::UUID" => 0,
-    "File::ShareDir" => 0,
-    "Moo" => 0,
-    "XML::Compile::WSDL11" => 0
+    "File::ShareDir" => "1.102",
+    "Moo" => "1.006001",
+    "XML::Compile::WSDL11" => "3.02"
   },
   "TEST_REQUIRES" => {
-    "Test::Most" => 0
+    "Test::Most" => "0.34"
   },
-  "VERSION" => "0.000002",
+  "VERSION" => "0.000003",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -36,11 +35,10 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Data::UUID" => 0,
-  "File::ShareDir" => 0,
-  "Moo" => 0,
-  "Test::Most" => 0,
-  "XML::Compile::WSDL11" => 0
+  "File::ShareDir" => "1.102",
+  "Moo" => "1.006001",
+  "Test::Most" => "0.34",
+  "XML::Compile::WSDL11" => "3.02"
 );
 
 

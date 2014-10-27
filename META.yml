@@ -3,7 +3,7 @@ abstract: 'Net::MundiPagg - Documentation coming soon :)'
 author:
   - 'Blabos de Blebe <blabos@cpan.org>'
 build_requires:
-  Test::Most: '0'
+  Test::Most: '0.34'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
@@ -14,11 +14,10 @@ meta-spec:
   version: '1.4'
 name: Net-MundiPagg
 requires:
-  Data::UUID: '0'
-  File::ShareDir: '0'
-  Moo: '0'
-  XML::Compile::WSDL11: '0'
+  File::ShareDir: '1.102'
+  Moo: '1.006001'
+  XML::Compile::WSDL11: '3.02'
 resources:
   bugtracker: https://github.com/blabos/Net-MundiPagg/issues
   repository: https://github.com/blabos/Net-MundiPagg
-version: '0.000002'
+version: '0.000003'

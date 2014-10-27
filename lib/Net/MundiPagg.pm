@@ -1,5 +1,5 @@
 package Net::MundiPagg;
-$Net::MundiPagg::VERSION = '0.000002';
+$Net::MundiPagg::VERSION = '0.000003';
 use Moo;
 use XML::Compile::SOAP11;
 use XML::Compile::WSDL11;
@@ -54,7 +54,7 @@ Net::MundiPagg - Net::MundiPagg - Documentation coming soon :)
 
 =head1 VERSION
 
-version 0.000002
+version 0.000003
 
 =head1 METHODS
 
